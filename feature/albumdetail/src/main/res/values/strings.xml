@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="album_detail_title">Album</string>
+    <string name="album_artwork">Artwork for %1$s</string>
+    <string name="detail_genre">Genre</string>
+    <string name="detail_release_date">Release date</string>
+    <string name="detail_tracks">Tracks</string>
+    <string name="detail_price">Price</string>
+    <string name="detail_copyright">Copyright</string>
+    <string name="open_in_apple_music">Open in Apple Music</string>
+    <string name="navigate_back">Back</string>
+</resources>

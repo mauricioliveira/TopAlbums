@@ -1,0 +1,36 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+}
+
+android {
+    namespace = "com.mauricioliveira.feature.albumdetail"
+    compileSdk = libs.versions.compileSdk.get().toInt()
+    defaultConfig {
+        minSdk = libs.versions.minSdk.get().toInt()
+    }
+    buildFeatures {
+        compose = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+kotlin {
+    jvmToolchain(libs.versions.jvm.get().toInt())
+}
+
+dependencies {
+    implementation(projects.core.domain)
+    implementation(projects.core.ui)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.bundles.compose)
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(platform(libs.koin.bom))
+    implementation(libs.bundles.feature)
+
+    testImplementation(libs.bundles.unit.test)
+}
